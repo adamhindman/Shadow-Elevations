@@ -383,9 +383,9 @@ const COLS = 12, ROWS = 12, GAP = 20;
 const BOX_LAYOUT_KEY = 'shadow-elevations-layout';
 
 const DEFAULT_LAYOUT = [
-  { id: 1, col: 1,  row: 1,  colSpan: 3, rowSpan: 4, locked: false, params: null, z: 1 },
+  { id: 1, col: 1,  row: 1,  colSpan: 4, rowSpan: 4, locked: false, params: null, z: 1 },
   { id: 2, col: 5,  row: 1,  colSpan: 4, rowSpan: 4, locked: false, params: null, z: 2 },
-  { id: 3, col: 10, row: 1,  colSpan: 3, rowSpan: 4, locked: false, params: null, z: 3 },
+  { id: 3, col: 9,  row: 1,  colSpan: 4, rowSpan: 4, locked: false, params: null, z: 3 },
   { id: 4, col: 1,  row: 6,  colSpan: 6, rowSpan: 7, locked: false, params: null, z: 4 },
   { id: 5, col: 7,  row: 6,  colSpan: 6, rowSpan: 7, locked: false, params: null, z: 5 },
 ];
@@ -751,8 +751,12 @@ const initialPresets = loadPresets();
 if (initialPresets.length) {
   restorePreset(initialPresets[0]);
 } else {
-  slider.value = 2;        sliderVal.textContent = '2px';    setFill(slider, 2 / 20);
-  blurSlider.value = 2;    blurVal.textContent = '2px';      setFill(blurSlider, 2 / 40);
-  intensitySlider.value = 100; intensityVal.textContent = '100%'; setFill(intensitySlider, 0.5);
+  slider.value = 0.5;          sliderVal.textContent = '0.5px';  setFill(slider, 0.5 / 20);
+  blurSlider.value = 0.3;      blurVal.textContent = '0.3px';    setFill(blurSlider, 0.3 / 40);
+  intensitySlider.value = 15;  intensityVal.textContent = '15%'; setFill(intensitySlider, 15 / 200);
+  innerShadowEnabled.checked = true;
+  innerShadowPicker.disabled = false;
+  innerShadowColor.disabled  = false;
+  innerShadowColor.value     = 'rgba(0, 0, 0, 0.075)';
   regenerate({ skipSliders: true });
 }
