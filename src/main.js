@@ -386,8 +386,8 @@ const DEFAULT_LAYOUT = [
   { id: 1, col: 1,  row: 1,  colSpan: 4, rowSpan: 4, locked: false, params: null, z: 1 },
   { id: 2, col: 5,  row: 1,  colSpan: 4, rowSpan: 4, locked: false, params: null, z: 2 },
   { id: 3, col: 9,  row: 1,  colSpan: 4, rowSpan: 4, locked: false, params: null, z: 3 },
-  { id: 4, col: 1,  row: 6,  colSpan: 6, rowSpan: 7, locked: false, params: null, z: 4 },
-  { id: 5, col: 7,  row: 6,  colSpan: 6, rowSpan: 7, locked: false, params: null, z: 5 },
+  { id: 4, col: 1,  row: 5,  colSpan: 6, rowSpan: 7, locked: false, params: null, z: 4 },
+  { id: 5, col: 7,  row: 5,  colSpan: 6, rowSpan: 7, locked: false, params: null, z: 5 },
 ];
 
 function loadLayout() {
